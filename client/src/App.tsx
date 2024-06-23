@@ -6,6 +6,11 @@ import Profile from './profile';
 import AuthenticationInstructionCard from './AuthenticationInstructionCard';
 import AuthorizationInstructionCard from './AuthorizationInstructionCard';
 import NextStepsInstructionCard from './NextStepsCard';
+import { Rating } from 'semantic-ui-react';
+
+const RatingExampleClearable = () => <Rating maxRating={5} clearable />
+
+export default RatingExampleClearable
 
 function App() {
   const [items, setItems] = useState<TodoItem[]>([]);
@@ -99,6 +104,7 @@ function App() {
 
       <header>
         <h1>Fifty ways to leave your lover</h1>
+        <div role="radiogroup" class="ui rating" tabindex="-1"><i role="radio" tabindex="0" aria-checked="false" aria-posinset="1" aria-setsize="5" class="icon"></i><i role="radio" tabindex="0" aria-checked="false" aria-posinset="2" aria-setsize="5" class="icon"></i><i role="radio" tabindex="0" aria-checked="false" aria-posinset="3" aria-setsize="5" class="icon"></i><i role="radio" tabindex="0" aria-checked="false" aria-posinset="4" aria-setsize="5" class="icon"></i><i role="radio" tabindex="0" aria-checked="false" aria-posinset="5" aria-setsize="5" class="icon"></i></div>
       </header>
       <div>
         <div className="row align-items-start">
